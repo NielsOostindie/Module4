@@ -10,32 +10,50 @@
   <body>
     <div class="calculator">
       <div id="output"></div>
-      <div onclick="knopGedeelddoor()" class="button">/</div>
-      <div onclick="knopKeer()" class="button">x</div>
-      <div onclick="knopMin()" class="button">-</div>
-      <div onclick="knopPlus()" class="button">+</div>
+      <div onclick="knopGedeelddoor(), playMySong(1)" class="button">/</div>
+      <div onclick="knopKeer(), playMySong(1)" class="button">x</div>
+      <div onclick="knopMin(), playMySong(1)" class="button">-</div>
+      <div onclick="knopPlus(), playMySong(1)" class="button">+</div>
       <br>
-      <div onclick="knop7()" class="button">7</div>
-      <div onclick="knop8()" class="button">8</div>
-      <div onclick="knop9()" class="button">9</div>
+      <div onclick="knop7(), playMySong(1)" class="button">7</div>
+      <div onclick="knop8(), playMySong(1)" class="button">8</div>
+      <div onclick="knop9(), playMySong(1)" class="button">9</div>
       <br>
-      <div onclick="knop4()" class="button">4</div>
-      <div onclick="knop5()" class="button">5</div>
-      <div onclick="knop6()" class="button">6</div>
+      <div onclick="knop4(), playMySong(1)" class="button">4</div>
+      <div onclick="knop5(), playMySong(1)" class="button">5</div>
+      <div onclick="knop6(), playMySong(1)" class="button">6</div>
       <br>
-      <div onclick="knop1()" class="button">1</div>
-      <div onclick="knop2()" class="button">2</div>
-      <div onclick="knop3()" class="button">3</div>
+      <div onclick="knop1(), playMySong(1) " class="button">1</div>
+      <div onclick="knop2(), playMySong(1)" class="button">2</div>
+      <div onclick="knop3(), playMySong(1)" class="button">3</div>
       <br>
-      <div onclick="knop0()" class="button">0</div>
+      <div onclick="knop0(), playMySong(1)" class="button">0</div>
       <div class="button">.</div>
-      <div onclick="knopClear()" class="button">c</div>
+      <div onclick="knopClear(), playMySong(1)" class="button">c</div>
       <br>
       <div id="right">
-      <div onclick="knopIs()" class="buttonIs">=</div>
+      <div onclick="knopIs(), playMySong(1)" class="buttonIs">=</div>
       </div>
     </div>
-
+    <audio id="myAudio1" src="/Workshop 3/assets/y2mate.com - ButtonPlate Click Minecraft Sound  Sound Effect for editing.mp3"></audio>
     <script src="/Workshop 3/assets/script/script.js"></script>
   </body>
+  <script>
+    var lijst = [
+      document.getElementById("myAudio1"),
+    ];
+
+    var audioIndex = 0;
+    var progressed = document.getElementsByClassName("progress")
+
+    function playMySong(index) {
+      var currentSong = lijst[index - 1];
+      if (currentSong.paused) {
+        currentSong.play();
+      } else {
+        currentSong.pause();
+      }
+
+    }
+  </script>
 </html>

@@ -66,3 +66,7 @@ let string = "8x8";
 string = string.replace("x", "*");
 string = string.replace("÷", "/");
 string = string.replace("plus", "+");
+
+
+function audio(){
+}
