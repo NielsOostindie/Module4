@@ -18,6 +18,22 @@ body {
   border-radius: 1px;
 }
 
+
+.button:hover{
+  background-color: grey;
+}
+.buttonIs:hover{
+  background-color: rgb(255, 186, 59);
+}
+.buttonIs:active{
+  background-color: white;
+  color: black;
+}
+.button:active{
+  background-color: white;
+  color: black;
+}
+
 .button {
   color: white;
   background-color: black;
